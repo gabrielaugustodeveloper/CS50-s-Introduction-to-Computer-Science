@@ -1,0 +1,105 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero section styling */
+.hero-section {
+    background: linear-gradient(rgba(0, 82, 204, 0.8), rgba(0, 53, 133, 0.9)),
+                url('https://via.placeholder.com/1920x600?text=Welcome') center/cover;
+    color: white;
+    padding: 100px 0;
+}
+
+/* Profile image styling */
+.profile-img {
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card styling */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styling */
+.navbar {
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Form styling */
+.form-control:focus {
+    border-color: #477bff;
+    box-shadow: 0 0 0 0.25rem rgba(71, 123, 255, 0.25);
+}
+
+/* Progress bar styling */
+.progress {
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background-color: #477bff;
+    font-weight: 500;
+}
+
+/* Hobbies card styling */
+.hobby-card {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+/* Contact page specific styles */
+.contact-info li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #477bff;
+    border-color: #477bff;
+}
+
+.btn-primary:hover {
+    background-color: #3a6ae0;
+    border-color: #3a6ae0;
+}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Quoted{% endblock %}
+
+{% block main %}
+    <h1 class="mb-4">Stock Quote</h1>
+    <div class="card mx-auto" style="max-width: 400px;">
+        <div class="card-body text-center">
+            <h2 class="card-title">{{ quote.name }} ({{ quote.symbol }})</h2>
+            <p class="card-text display-6">{{ quote.price | usd }}</p>
+            <a href="/buy?symbol={{ quote.symbol }}" class="btn btn-success mt-3">Buy Now</a>
+        </div>
+    </div>
+{% endblock %}

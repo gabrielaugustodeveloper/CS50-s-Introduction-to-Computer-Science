@@ -1,0 +1,35 @@
+{% extends "layout.html" %}  <!-- Inherits structure from base template -->
+
+{% block title %}Log In{% endblock %}  <!-- Sets page title in browser tab -->
+
+{% block main %}  <!-- Start main content block -->
+    <!-- Login Form -->
+    <form action="/login" method="post">  <!-- POST to /login endpoint -->
+        <!-- Username Input -->
+        <div class="mb-3">  <!-- Form group with bottom margin -->
+            <input
+                autocomplete="off"      <!-- Disables browser autofill -->
+                autofocus               <!-- Auto-focuses cursor on page load -->
+                class="form-control mx-auto w-auto"  <!-- Centered with automatic width -->
+                name="username"         <!-- Server will receive as 'username' -->
+                placeholder="Username"  <!-- Input hint text -->
+                type="text"             <!-- Text input type -->
+                required                <!-- HTML5 validation (modern browsers) -->
+            >
+        </div>
+
+        <!-- Password Input -->
+        <div class="mb-3">  <!-- Form group with bottom margin -->
+            <input
+                class="form-control mx-auto w-auto"  <!-- Centered with automatic width -->
+                name="password"         <!-- Server will receive as 'password' -->
+                placeholder="Password"  <!-- Input hint text -->
+                type="password"        <!-- Masks input characters -->
+                required               <!-- Mandatory field validation -->
+            >
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn btn-primary" type="submit">Log In</button>  <!-- Primary action button -->
+    </form>
+{% endblock %}  <!-- End main content block -->

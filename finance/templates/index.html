@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block main %}
+    <h1 class="mb-4">Your Portfolio</h1>
+
+    <!-- Cash Balance -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2 class="card-title">Cash Balance</h2>
+            <p class="display-6">{{ cash | usd }}</p>
+        </div>
+    </div>
+
+    <!-- Stock Holdings -->
+    <h2 class="mb-3">Stock Holdings</h2>
+    {% if holdings %}
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Company</th>
+                        <th>Shares</th>
+                        <th>Current Price</th>
+                        <th>Total Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stock in holdings %}
+                        <tr>
+                            <td>{{ stock.symbol }}</td>
+                            <td>{{ stock.name }}</td>
+                            <td>{{ stock.total_shares }}</td>
+                            <td>{{ stock.price | usd }}</td>
+                            <td>{{ stock.value | usd }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Grand Total -->
+        <div class="text-end mt-3">
+            <h3>Grand Total: {{ total_value | usd }}</h3>
+        </div>
+    {% else %}
+        <div class="alert alert-info">
+            You don't own any stocks yet. <a href="/buy">Buy some stocks</a> to get started!
+        </div>
+    {% endif %}
+{% endblock %}

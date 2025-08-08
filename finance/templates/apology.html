@@ -1,0 +1,21 @@
+{% extends "layout.html" %}  <!-- Inherits base structure from layout.html -->
+
+{% block title %}Apology{% endblock %}  <!-- Sets browser tab title -->
+
+{% block main %}  <!-- Start main content block -->
+    <!--
+        MEME-BASED ERROR MESSAGING SYSTEM
+        Uses memegen.link API to generate custom error memes with dynamic text
+
+        Parameters:
+        - top: Top text for meme (passed from Flask route)
+        - bottom: Bottom text for meme (passed from Flask route)
+        - Background uses Grumpy Cat image (https://knowyourmeme.com/memes/grumpy-cat)
+    -->
+    <img
+        alt="{{ top }}"  <!-- Accessibility: Alt text shows error message -->
+        class="border img-fluid"  <!-- Styling: Responsive image with border -->
+        src="https://api.memegen.link/images/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?background=https://i.imgur.com/CsCgN7Ll.png&width=400"
+        title="{{ top }}"  <!-- Tooltip displays error message on hover -->
+    >
+{% endblock %}  <!-- End main content block -->

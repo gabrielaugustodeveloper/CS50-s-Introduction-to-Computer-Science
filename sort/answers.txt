@@ -1,0 +1,8 @@
+sort1 uses: bubble sort
+How do you know?: sort1 shows dramatically different performance - very fast on sorted input (due to early termination) but slow on reversed and random inputs. This optimized behavior is characteristic of bubble sort.
+
+sort2 uses: merge sort
+How do you know?: sort2 shows consistently fast performance across all input types (sorted, reversed, random). This matches merge sort's O(n log n) time complexity that maintains efficiency regardless of input order.
+
+sort3 uses: selection sort
+How do you know?: sort3 shows consistently slow performance across all input types with minimal variation. This matches selection sort's O(n²) time complexity that performs the same number of comparisons regardless of input order.

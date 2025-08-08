@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Nerd Hobbies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+        .nerd-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(86, 61, 124, 0.85);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .hobby-header {
+            background: linear-gradient(135deg, #6f42c1, #4a148c);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .hobby-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hobby-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+        .console-btn {
+            background: #343a40;
+            color: white;
+            border: none;
+            margin: 5px;
+        }
+        .console-btn:hover {
+            background: #495057;
+        }
+        .active-console {
+            background: #6f42c1 !important;
+        }
+        .progress {
+            height: 25px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Geek Zone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="hobbies.html">Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hobby-header">
+        <div class="container">
+            <h1 class="hobby-title">My Nerd Life</h1>
+            <p class="hobby-subtitle">Gaming, Learning, and Everything Geeky</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h2>Current Obsessions</h2>
+            <div class="d-flex justify-content-center flex-wrap mt-4">
+                <span class="badge bg-primary me-2 mb-2 p-2">Cyberpunk 2077</span>
+                <span class="badge bg-danger me-2 mb-2 p-2">Star Wars: Ahsoka</span>
+                <span class="badge bg-success me-2 mb-2 p-2">JavaScript Algorithms</span>
+                <span class="badge bg-warning me-2 mb-2 p-2">Attack on Titan</span>
+                <span class="badge bg-info me-2 mb-2 p-2">Clean Code Book</span>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Gaming Card -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Gaming Setup">
+                        <div class="nerd-badge">Gaming</div>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Video Games</h2>
+                        <p class="card-text">I'm passionate about immersive gaming experiences. From RPGs to competitive FPS, I enjoy exploring virtual worlds and mastering game mechanics.</p>
+
+                        <div class="mt-4">
+                            <h5>Favorite Platforms:</h5>
+                            <div class="d-flex flex-wrap mb-3">
+                                <button class="btn console-btn active-console" data-console="pc">PC Master Race</button>
+                                <button class="btn console-btn" data-console="ps5">PlayStation 5</button>
+                                <button class="btn console-btn" data-console="switch">Nintendo Switch</button>
+                            </div>
+
+                            <div id="pc-games" class="console-games">
+                                <ul>
+                                    <li>Cyberpunk 2077: Phantom Liberty</li>
+                                    <li>Baldur's Gate 3</li>
+                                    <li>Valorant</li>
+                                </ul>
+                            </div>
+                            <div id="ps5-games" class="console-games d-none">
+                                <ul>
+                                    <li>God of War: Ragnarök</li>
+                                    <li>Spider-Man 2</li>
+                                    <li>Final Fantasy XVI</li>
+                                </ul>
+                            </div>
+                            <div id="switch-games" class="console-games d-none">
+                                <ul>
+                                    <li>The Legend of Zelda: Tears of the Kingdom</li>
+                                    <li>Sonic Frontiers</li>
+                                    <li>Pokémon Scarlet/Violet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reading Card -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1495640388908-05fa85288e61?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Nerd Books">
+                        <div class="nerd-badge">Knowledge</div>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Nerd Books & Learning</h2>
+                        <p class="card-text">I constantly feed my brain with technical books, programming guides, and sci-fi/fantasy novels. Learning new things is my ultimate hobby.</p>
+
+                        <div class="mt-4">
+                            <h5>Currently Reading:</h5>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://m.media-amazon.com/images/I/41SH-SvWPxL.jpg" alt="Clean Code" style="width: 60px; height: auto; margin-right: 15px;">
+                                <div>
+                                    <strong>Clean Code</strong> by Robert C. Martin<br>
+                                    <small>Essential programming best practices</small>
+                                </div>
+                            </div>
+
+                            <h5>Recommendations:</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-dark dropdown-toggle" type="button" id="booksDropdown" data-bs-toggle="dropdown">
+                                    Top Tech Books
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Design Patterns by Gamma et al.</a></li>
+                                    <li><a class="dropdown-item" href="#">The Pragmatic Programmer</a></li>
+                                    <li><a class="dropdown-item" href="#">Structure and Interpretation of Computer Programs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series & Anime Card -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Anime and Series">
+                        <div class="nerd-badge">Entertainment</div>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Anime & Sci-Fi Series</h2>
+                        <p class="card-text">I'm a huge fan of anime and sci-fi series. The storytelling, character development, and immersive worlds keep me coming back for more.</p>
+
+                        <div class="mt-4">
+                            <h5>My Watchlist:</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Attack on Titan
+                                    <span class="badge bg-success rounded-pill">Completed</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Star Wars: Ahsoka
+                                    <span class="badge bg-primary rounded-pill">Watching</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Cyberpunk: Edgerunners
+                                    <span class="badge bg-warning rounded-pill">On Hold</span>
+                                </li>
+                            </ul>
+
+                            <div class="mt-3">
+                                <button class="btn btn-sm btn-outline-info" id="recommendBtn">Recommend Me Something!</button>
+                                <div id="animeRecommendation" class="mt-2 fst-italic"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Programming Card -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Programming">
+                        <div class="nerd-badge">Passion</div>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Programming & Development</h2>
+                        <p class="card-text">Coding is more than a career - it's my hobby. I love building projects, solving algorithmic challenges, and exploring new technologies.</p>
+
+                        <div class="mt-4">
+                            <h5>Current Focus Areas:</h5>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>Web Development</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>JavaScript/TypeScript</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>Python Automation</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline-dark mt-2" id="projectIdeaBtn">Generate Project Idea</button>
+                            <div id="projectIdea" class="mt-2 fw-bold"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Geek Zone. All rights reserved.</p>
+            <p class="mb-0">May the force be with you, and your code compile on the first try!</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Console switching functionality
+        document.querySelectorAll('.console-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.console-btn').forEach(btn => {
+                    btn.classList.remove('active-console');
+                });
+
+                // Add active class to clicked button
+                this.classList.add('active-console');
+
+                // Hide all game lists
+                document.querySelectorAll('.console-games').forEach(div => {
+                    div.classList.add('d-none');
+                });
+
+                // Show selected game list
+                const consoleId = this.getAttribute('data-console') + '-games';
+                document.getElementById(consoleId).classList.remove('d-none');
+            });
+        });
+
+        // Anime recommendation button
+        document.getElementById('recommendBtn').addEventListener('click', function() {
+            const recommendations = [
+                "You should watch 'Steins;Gate' - it's a masterpiece of time travel sci-fi!",
+                "Check out 'Fullmetal Alchemist: Brotherhood' - considered one of the best anime ever made.",
+                "'Demon Slayer' has incredible animation and compelling characters.",
+                "For sci-fi fans, 'Cowboy Bebop' is an absolute classic.",
+                "'One Punch Man' is hilarious and has amazing action sequences."
+            ];
+
+            const randomRecommendation = recommendations[Math.floor(Math.random() * recommendations.length)];
+            document.getElementById('animeRecommendation').textContent = randomRecommendation;
+        });
+
+        // Programming project idea generator
+        document.getElementById('projectIdeaBtn').addEventListener('click', function() {
+            const projectTypes = ['Web App', 'Chrome Extension', 'CLI Tool', 'Game', 'API Service', 'Mobile App'];
+            const technologies = ['React', 'Node.js', 'Python', 'TypeScript', 'Vue', 'Next.js'];
+            const purposes = ['productivity', 'gaming', 'learning', 'automation', 'data visualization', 'social networking'];
+
+            const randomType = projectTypes[Math.floor(Math.random() * projectTypes.length)];
+            const randomTech = technologies[Math.floor(Math.random() * technologies.length)];
+            const randomPurpose = purposes[Math.floor(Math.random() * purposes.length)];
+
+            document.getElementById('projectIdea').textContent =
+                `Build a ${randomType} using ${randomTech} for ${randomPurpose}.`;
+        });
+    </script>
+</body>
+</html>

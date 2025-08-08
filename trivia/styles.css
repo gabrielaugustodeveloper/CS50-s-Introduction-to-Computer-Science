@@ -1,0 +1,215 @@
+/* Base styles for the entire page */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles - background and font settings */
+body {
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark gray text */
+    font-family: 'Montserrat', sans-serif; /* Modern, readable font */
+    font-size: 1rem; /* Base font size */
+    line-height: 1.6; /* Improved readability */
+    padding: 20px; /* Space around content */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container for main content - centers content and sets width */
+.container {
+    max-width: 800px; /* Optimal reading width */
+    width: 100%; /* Responsive width */
+    margin: 0 auto; /* Center container */
+    padding: 20px; /* Inner spacing */
+}
+
+/* Header styles - with gradient background */
+.header {
+    background: linear-gradient(135deg, #477bff, #8a2be2); /* Blue to purple gradient */
+    color: #fff; /* White text */
+    padding: 2.5rem 1rem; /* Generous padding */
+    text-align: center; /* Center content */
+    margin-bottom: 2rem; /* Space below header */
+    border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%; /* Full width */
+}
+
+/* Header title styles */
+.header h1 {
+    font-size: 3rem; /* Large, readable title */
+    margin-bottom: 0.5rem; /* Space below title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+}
+
+/* Header subtitle styles */
+.header p {
+    font-size: 1.2rem; /* Slightly larger text */
+    opacity: 0.9; /* Slightly transparent */
+}
+
+/* Section styling - each trivia section */
+.section {
+    background-color: white; /* Clean white background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 2rem; /* Inner spacing */
+    margin-bottom: 2rem; /* Space between sections */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Section hover effect - slight lift and shadow enhancement */
+.section:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Section title styles */
+.section h2 {
+    color: #477bff; /* Blue color */
+    border-bottom: 3px solid #477bff; /* Bottom border */
+    padding-bottom: 10px; /* Space below text */
+    margin-bottom: 1.5rem; /* Space below heading */
+    font-size: 1.8rem; /* Larger font size */
+}
+
+/* Question styles */
+h3 {
+    color: #2c3e50; /* Dark blue color */
+    margin-bottom: 1.5rem; /* Space below question */
+    font-size: 1.4rem; /* Slightly larger text */
+    font-weight: 500; /* Medium weight */
+}
+
+/* Horizontal rule styling */
+hr {
+    border: none; /* Remove default border */
+    height: 2px; /* Thickness */
+    background: linear-gradient(to right, #477bff, #8a2be2); /* Gradient line */
+    margin: 1.5rem 0; /* Spacing around */
+}
+
+/* Choices container - for multiple choice buttons */
+.choices {
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Vertical stacking */
+    gap: 15px; /* Space between buttons */
+    margin-bottom: 1.5rem; /* Space below buttons */
+}
+
+/* Button styling - for choices and submit button */
+button {
+    background-color: #e9ecef; /* Light gray background */
+    border: 2px solid transparent; /* No border initially */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.1rem; /* Readable size */
+    font-weight: 500; /* Medium weight */
+    padding: 15px 25px; /* Generous padding */
+    text-align: center; /* Centered text */
+    transition: all 0.3s ease; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor */
+    color: #495057; /* Dark gray text */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
+    margin: 0 auto; /* Centered */
+    display: block; /* Block display */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #d0ebff; /* Light blue background */
+    transform: scale(1.02); /* Slight enlargement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Free response section styling */
+.free-response {
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Vertical stacking */
+    align-items: center; /* Center alignment */
+    gap: 15px; /* Space between elements */
+    margin: 1.5rem 0; /* Vertical spacing */
+}
+
+/* Text input styling */
+input[type="text"] {
+    padding: 12px 20px; /* Comfortable padding */
+    border: 2px solid #ced4da; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.1rem; /* Readable size */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Text input hover and focus states */
+input[type="text"]:hover,
+input[type="text"]:focus {
+    border-color: #477bff; /* Blue border */
+    box-shadow: 0 0 0 3px rgba(71, 123, 255, 0.2); /* Glow effect */
+    outline: none; /* Remove default outline */
+}
+
+/* Feedback message styling */
+.feedback {
+    margin-top: 1.5rem; /* Space above feedback */
+    font-size: 1.2rem; /* Readable size */
+    font-weight: bold; /* Stand out */
+    min-height: 30px; /* Consistent height */
+    text-align: center; /* Centered text */
+    padding: 10px; /* Inner spacing */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Correct feedback styling */
+.correct {
+    color: #28a745; /* Green text */
+    background-color: #d4edda; /* Light green background */
+    border: 1px solid #c3e6cb; /* Green border */
+}
+
+/* Incorrect feedback styling */
+.incorrect {
+    color: #dc3545; /* Red text */
+    background-color: #f8d7da; /* Light red background */
+    border: 1px solid #f5c6cb; /* Red border */
+}
+
+/* Correct answer styling */
+.correct-bg {
+    background-color: #d4edda !important; /* Light green */
+    border-color: #c3e6cb !important; /* Green border */
+    color: #155724; /* Dark green text */
+}
+
+/* Incorrect answer styling */
+.incorrect-bg {
+    background-color: #f8d7da !important; /* Light red */
+    border-color: #f5c6cb !important; /* Red border */
+    color: #721c24; /* Dark red text */
+}
+
+/* Progress display styling */
+.progress {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    padding: 15px; /* Inner spacing */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 1.5rem; /* Space above */
+    text-align: center; /* Centered text */
+    font-size: 1.2rem; /* Readable size */
+}
+
+/* Footer styling */
+.footer {
+    margin-top: 2rem; /* Space above footer */
+    color: #6c757d; /* Gray text */
+    font-size: 0.9rem; /* Smaller size */
+    text-align: center; /* Centered text */
+    padding: 1rem; /* Inner spacing */
+    width: 100%; /* Full width */
+}

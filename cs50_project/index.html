@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corretor de Redação ENEM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container"> <!-- Container principal da página -->
+
+        <header> <!-- Cabeçalho da página -->
+            <h1><i class="fas fa-edit"></i> Corretor de Redação ENEM :D</h1> <!-- Título com ícone -->
+            <p>Obtenha uma análise detalhada da sua redação baseada nas 5 competências do ENEM com sugestões de melhoria</p> <!-- Subtítulo explicativo -->
+        </header>
+        
+        <div class="card"> <!-- Card que contém o formulário de envio da redação -->
+            <h2 class="card-title"><i class="fas fa-pencil-alt"></i> Cole sua redação</h2> <!-- Título da seção com ícone -->
+            <textarea id="redacao" placeholder="Digite ou cole sua redação aqui..."></textarea> <!-- Área de texto para o usuário colar sua redação -->
+            
+            <div class="design-controls"> <!-- Controles de personalização visual -->
+                <div class="color-picker"> <!-- Seletor de cor principal -->
+                    <span>Cor principal:</span>
+                    <input type="color" id="primary-color" value="#4361ee"> <!-- Input de cor com valor inicial azul -->
+                </div>
+                <button class="theme-toggle" id="theme-toggle"> <!-- Botão para alternar entre temas claro e escuro -->
+                    <i class="fas fa-moon"></i> Modo Escuro
+                </button>
+            </div>
+            
+            <button id="btn-analisar" class="btn btn-block"><i class="fas fa-search"></i> Analisar Redação</button> <!-- Botão para enviar a redação para análise -->
+        </div>
+        
+        <div class="loading" id="loading"> <!-- Seção exibida enquanto a análise está em andamento -->
+            <div class="spinner"></div> <!-- Animação de carregamento (geralmente um spinner giratório) -->
+            <p>Analisando sua redação, aguarde...</p> <!-- Mensagem de carregamento -->
+        </div>
+        
+        <div class="error" id="error"> <!-- Seção exibida quando ocorre algum erro na análise -->
+            <p><i class="fas fa-exclamation-triangle"></i> <span id="error-message"></span></p> <!-- Mensagem de erro dinâmica -->
+        </div>
+        
+        <div class="card result-container" id="result-container"> <!-- Card com os resultados da análise -->
+            <h2 class="card-title"><i class="fas fa-chart-bar"></i> Resultado da Análise</h2> <!-- Título da seção com ícone -->
+            <textarea id="resposta-bruta" readonly></textarea> <!-- Área de texto somente leitura para mostrar o resultado -->
+        </div>
+
+        <footer> <!-- Rodapé da página -->
+            <p>Desenvolvido com ❤️ para ajudar estudantes a se prepararem para o ENEM | Utilize uma chave API válida para integração real</p> <!-- Mensagem de autoria e observação -->
+        </footer>
+    </div>
+
+    <script src="script.js"></script> <!-- Importa o script JavaScript local -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+HTML Tags Used:
+1. <nav> - Used for the navigation bar
+2. <section> - To organize content sections
+3. <div> - Generic container for styling
+4. <button> - Interactive elements throughout the site
+5. <form> - Contact form on contact page
+6. <input> - Form input fields
+7. <textarea> - Message field in contact form
+8. <ul> - Unordered lists for displaying information
+9. <li> - List items in navigation and content
+10. <img> - Displaying profile and hobby images
+11. <footer> - Site footer section
+12. <a> - Hyperlinks for navigation
+13. <i> - Bootstrap icons
+14. <span> - For inline elements like the navbar toggler icon
+
+CSS Properties Used:
+1. background-color - Setting background colors for various elements
+2. color - Text color styling
+3. padding - Spacing within elements
+4. margin - Spacing between elements
+5. font-size - Text sizing
+6. border-radius - Rounded corners for elements
+7. box-shadow - Adding depth with shadows
+8. transition - Smooth animations for hover effects
+9. transform - Element transformations on hover
+10. display - Controlling element layout
+11. flex - Flexbox layout for responsive design
+12. position - Positioning elements
+
+Bootstrap Features Used:
+1. Navbar component for responsive navigation
+2. Card component for content sections
+3. Grid system for responsive layouts
+4. Buttons with various styles
+5. Form components with validation
+6. Progress bars for skills display
+7. Dropdown menu in hobbies page
+8. Responsive utilities for mobile adaptation
+
+JavaScript Implementation:
+I implemented JavaScript to enhance interactivity in several ways:
+- On the homepage, a welcome button shows an alert and the navbar changes color on scroll
+- On the about page, the profile image scales on hover
+- On the hobbies page, a button toggles display of favorite hiking trails
+- On the contact page, form submission shows a confirmation alert and resets the form

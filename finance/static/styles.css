@@ -1,0 +1,72 @@
+/* Brand sizing */
+nav .navbar-brand {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+/* Brand colors */
+nav .navbar-brand .blue { color: #537fbe; }
+nav .navbar-brand .red { color: #ea433b; }
+nav .navbar-brand .yellow { color: #f5b82e; }
+nav .navbar-brand .green { color: #2e944b; }
+
+/* Table styling */
+table {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* Form styling */
+.form-control, .form-select {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: none;
+}
+
+/* Button styling */
+.btn {
+    margin: 0.5rem;
+    min-width: 100px;
+}
+
+/* Alert customization */
+.alert {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+/* Center content */
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+    .form-control, .form-select {
+        width: 100%;
+        max-width: none;
+    }
+}

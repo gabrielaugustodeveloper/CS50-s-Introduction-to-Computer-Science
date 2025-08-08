@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz Challenge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section with title -->
+    <header class="header">
+        <h1>Trivia Challenge</h1>
+        <p>Test your knowledge with these questions!</p>
+    </header>
+
+    <!-- Main container for quiz sections -->
+    <main class="container">
+        <!-- Multiple Choice Section -->
+        <section class="section">
+            <h2>Part 1: Multiple Choice</h2>
+            <hr>
+
+            <!-- Multiple choice question -->
+            <h3>Which planet in our solar system is known as the "Red Planet"?</h3>
+
+            <!-- Answer choices container -->
+            <div class="choices">
+                <!-- Each button has a data-answer attribute for JS to check -->
+                <button class="choice" data-answer="venus">Venus</button>
+                <button class="choice" data-answer="mars">Mars</button>
+                <button class="choice" data-answer="jupiter">Jupiter</button>
+                <button class="choice" data-answer="saturn">Saturn</button>
+            </div>
+
+            <!-- Feedback area for multiple choice -->
+            <div id="feedback1" class="feedback"></div>
+        </section>
+
+        <!-- Free Response Section -->
+        <section class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+
+            <!-- Free response question -->
+            <h3>What is the largest mammal on Earth?</h3>
+
+            <!-- Answer input area -->
+            <div class="free-response">
+                <!-- Text input for user's answer -->
+                <input type="text" id="free-answer" placeholder="Enter your answer here...">
+                <!-- Button to submit answer -->
+                <button id="submit-answer">Submit Answer</button>
+            </div>
+
+            <!-- Feedback area for free response -->
+            <div id="feedback2" class="feedback"></div>
+        </section>
+
+        <!-- Progress tracking section -->
+        <div class="progress">
+            <p>Your Progress: <span id="score">0</span> out of 2 questions answered</p>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <p>Trivia Quiz Challenge &copy; 2023 | Made with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

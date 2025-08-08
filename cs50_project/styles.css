@@ -1,0 +1,385 @@
+/* Variáveis de cor globais para reutilização no tema */
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --success: #4cc9f0;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --danger: #e63946;
+    --warning: #fca311;
+    --info: #4895ef;
+}
+
+/* Reset básico e configuração de fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilização geral do corpo da página */
+body {
+    background: url('01.png') no-repeat center center fixed; /* imagem de fundo fixa */
+    background-size: cover; /* cobre toda a tela */
+    color: var(--light); /* cor do texto principal */
+    min-height: 100vh; /* altura mínima da tela */
+    padding: 20px; /* espaço interno */
+}
+
+/* Container centralizado com largura máxima */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho da página centralizado */
+header {
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+
+/* Título principal com fundo e arredondamento */
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background: rgba(0, 0, 0, 0.6); /* fundo escuro com transparência */
+    padding: 10px 20px;             /* espaço interno para envolver o texto */
+    border-radius: 10px;            /* bordas arredondadas */
+    color: white;                   /* cor do texto */
+}
+
+/* Parágrafo abaixo do título */
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+
+    background: rgba(0, 0, 0, 0.8); /* fundo escuro com transparência */
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Cartões de conteúdo */
+.card {
+    background: black;
+    backdrop-filter: blur(10px); /* desfoque de fundo */
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Título dentro dos cartões */
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Área de texto para input do usuário */
+textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--light);
+    font-size: 1.1rem;
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+/* Foco da textarea */
+textarea:focus {
+    outline: none;
+    border-color: var(--success);
+    box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.3);
+}
+
+/* Botões principais */
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
+    text-align: center;
+}
+
+/* Efeito hover no botão */
+.btn:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(67, 97, 238, 0.6);
+}
+
+/* Efeito ao clicar no botão */
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Botão de largura total */
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Ícone dentro do botão */
+.btn i {
+    margin-right: 10px;
+}
+
+/* Container escondido por padrão */
+.result-container {
+    display: none;
+}
+
+/* Grid de competências */
+.competences {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+/* Cartões individuais de competência */
+.competence {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre a competência */
+.competence:hover {
+    transform: translateY(-5px);
+}
+
+/* Título da competência */
+.competence h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--success);
+}
+
+/* Pontuação individual */
+.score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--warning);
+}
+
+/* Pontuação total */
+.total-score {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--warning);
+    margin: 20px 0;
+    text-shadow: 0 0 10px rgba(252, 163, 17, 0.5);
+}
+
+/* Sessão de análise */
+.analysis-section {
+    margin: 30px 0;
+}
+
+/* Título das análises */
+.analysis-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--info);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Conteúdo da análise */
+.analysis-content {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Bordas coloridas para diferentes análises */
+.strengths .analysis-content {
+    border-left: 4px solid var(--success);
+}
+
+.improvements .analysis-content {
+    border-left: 4px solid var(--danger);
+}
+
+.suggestions .analysis-content {
+    border-left: 4px solid var(--info);
+}
+
+/* Estilo para a seção de carregamento */
+.loading {
+    text-align: center;
+    padding: 40px;
+    display: none;
+}
+
+/* Animação de carregamento (spinner) */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--success);
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Mensagem de erro */
+.error {
+    background: rgba(230, 57, 70, 0.2);
+    border-left: 4px solid var(--danger);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    display: none;
+}
+
+/* Controles de design */
+.design-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Estilo do seletor de cor */
+.color-picker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botões circulares do seletor de cor */
+.color-picker input {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Botão de alternância de tema */
+.theme-toggle {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hover no botão de tema */
+.theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Rodapé da página */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+
+    background: rgba(0, 0, 0, 1.5); /* fundo escuro */
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .competences {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Área de resposta bruta */
+#resposta-bruta {
+    width: 100%;
+    min-height: 400px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--light);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.05rem;
+    resize: vertical;
+    white-space: pre-wrap;
+}
+
+/* Modo Claro */
+body.light-theme {
+    background: #f0f2f5;
+    color: #333;
+}
+
+body.light-theme .card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme textarea,
+body.light-theme #resposta-bruta {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+body.light-theme header h1,
+body.light-theme header p,
+body.light-theme footer {
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+}
+
+body.light-theme .theme-toggle {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+body.light-theme .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Declares HTML5 document type -->
+<html lang="en"> <!-- Root element with language set to English -->
+<head>
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Montserrat font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <!-- Link to external CSS stylesheet -->
+    <link href="/static/styles.css" rel="stylesheet">
+    <!-- Page title shown in browser tab -->
+    <title>Birthdays</title>
+</head>
+<body>
+    <!-- Header section with blue background -->
+    <div class="header">
+        <!-- Main heading -->
+        <h1>Birthdays</h1>
+    </div>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- First section: Birthday input form -->
+        <div class="section">
+            <!-- Section heading -->
+            <h2>Add a Birthday</h2>
+
+            <!--
+                Form configuration:
+                - action: Submits data to root URL ("/")
+                - method: Uses POST request to send form data
+            -->
+            <form action="/" method="post">
+                <!--
+                    Name input field:
+                    - autocomplete="off": Disables browser autofill
+                    - autofocus: Puts cursor in this field on page load
+                    - placeholder: Display hint text
+                    - type="text": Text input field
+                    - required: Mandatory field
+                -->
+                <input autocomplete="off" autofocus name="name" placeholder="Name" type="text" required>
+
+                <!--
+                    Month input field:
+                    - type="number": Only accepts numbers
+                    - min/max: Sets valid range (1-12)
+                    - required: Mandatory field
+                -->
+                <input name="month" placeholder="Month (1-12)" type="number" min="1" max="12" required>
+
+                <!--
+                    Day input field:
+                    - type="number": Only accepts numbers
+                    - min/max: Sets valid range (1-31)
+                    - required: Mandatory field
+                -->
+                <input name="day" placeholder="Day (1-31)" type="number" min="1" max="31" required>
+
+                <!-- Submit button to send form data -->
+                <input type="submit" value="Add Birthday">
+            </form>
+        </div>
+
+        <!-- Second section: Birthday display table -->
+        <div class="section">
+            <!-- Section heading -->
+            <h2>All Birthdays</h2>
+
+            <!-- Table to display stored birthdays -->
+            <table>
+                <!-- Table header row -->
+                <thead>
+                    <tr>
+                        <th>Name</th>  <!-- Column header -->
+                        <th>Birthday</th> <!-- Column header -->
+                    </tr>
+                </thead>
+
+                <!-- Table body where birthdays will be dynamically inserted -->
+                <tbody>
+                    {#
+                        Jinja2 template loop:
+                        - Iterates through 'birthdays' variable passed from Flask
+                        - Renders each birthday as a table row
+                    #}
+                    {% for birthday in birthdays %}
+                    <tr>
+                        <!-- Display person's name in first column -->
+                        <td>{{ birthday.name }}</td>
+                        <!-- Display birthday in month/day format in second column -->
+                        <td>{{ birthday.month }}/{{ birthday.day }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
